@@ -24,17 +24,25 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
     
-    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 100)];
+    UIView *exampleView = [self createExampleView];
+    
+    _menuView = [[MGMenuView alloc] initWithMenuView:exampleView];
+    [self.view addSubview:_menuView];
+}
+
+- (UIView *)createExampleView {
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 60)];
     [view setBackgroundColor:[UIColor colorWithRed:0 green:0.722 blue:1 alpha:1]];
-    UILabel *lbl = [[UILabel alloc] initWithFrame:CGRectMake(20, 20, 280, 40)];
+    
+    UILabel *lbl = [[UILabel alloc] initWithFrame:view.bounds];
     [lbl setText:@"This is a test"];
+    [lbl setTextAlignment:NSTextAlignmentCenter];
     [lbl setTextColor:[UIColor whiteColor]];
     [view addSubview:lbl];
+    [lbl setCenter:view.center];
     
-    _menuView = [[MGMenuView alloc] initWithMenuView:view];
-    [self.view addSubview:_menuView];
+    return view;
 }
 
 - (IBAction)menuAction:(id)sender {
@@ -42,6 +50,10 @@
         [_menuView hide];
     else
         [_menuView show];
+}
+
+- (BOOL)prefersStatusBarHidden {
+    return YES;
 }
 
 @end

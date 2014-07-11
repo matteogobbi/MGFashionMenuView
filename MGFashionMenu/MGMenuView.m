@@ -115,12 +115,8 @@ static CGFloat const animationDuration = .5;
             if (needsToAppear) {
                 _sideAnchorView.frame = CGRectMake(_sideAnchorView.frame.origin.x, _menuView.frame.size.height-sideHelperView/2.0, sideHelperView, sideHelperView);
                 _menuView.frame = CGRectMake(_menuView.frame.origin.x, 0, _menuView.frame.size.width, _menuView.frame.size.height);
-            } else {
+            } else
                 _sideAnchorView.frame = CGRectMake(_sideAnchorView.frame.origin.x, -sideHelperView/2.0, sideHelperView, sideHelperView);
-                _menuView.frame = CGRectMake(_menuView.frame.origin.x, -_menuView.frame.size.height, _menuView.frame.size.width, _menuView.frame.size.height);
-            }
-            
-            //[_menuView setHidden:!needsToAppear];
             
         } completion:^(BOOL finished) {
             
@@ -136,8 +132,11 @@ static CGFloat const animationDuration = .5;
             
             if (needsToAppear)
                 _centerAnchorView.frame = CGRectMake(_centerAnchorView.frame.origin.x, _menuView.frame.size.height-sideHelperView/2.0, sideHelperView, sideHelperView);
-            else
+            else {
                 _centerAnchorView.frame = CGRectMake(_centerAnchorView.frame.origin.x, -sideHelperView/2.0, sideHelperView, sideHelperView);
+                
+                _menuView.frame = CGRectMake(_menuView.frame.origin.x, -_menuView.frame.size.height, _menuView.frame.size.width, _menuView.frame.size.height);
+            }
             
         } completion:nil];
         
