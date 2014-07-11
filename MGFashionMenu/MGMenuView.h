@@ -10,6 +10,11 @@
 
 @interface MGMenuView : UIView
 
-- (id)initWithFrame:(CGRect)frame sideAnchorView:(UIView *)sideAnchorView centerAnchorView:(UIView *)centerAnchorView;
+@property (atomic, assign, readonly) BOOL isShown;
+
+- (instancetype)initWithMenuView:(UIView *)menuView;
+
+- (void)show;
+- (void)hide;
 
 @end

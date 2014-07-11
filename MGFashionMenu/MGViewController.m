@@ -16,15 +16,9 @@
 
 @end
 
-static CGFloat const sideHelperView = 30.0;
-static CGFloat const animationDuration = .5;
 
 @implementation MGViewController {
     MGMenuView *_menuView;
-    UIView *_centerAnchorView;
-    UIView *_sideAnchorView;
-    CADisplayLink *_displayLink;
-    BOOL _isShowed;
 }
 
 - (void)viewDidLoad
@@ -32,62 +26,22 @@ static CGFloat const animationDuration = .5;
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
-    _isShowed = NO;
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 100)];
+    [view setBackgroundColor:[UIColor colorWithRed:0 green:0.722 blue:1 alpha:1]];
+    UILabel *lbl = [[UILabel alloc] initWithFrame:CGRectMake(20, 20, 280, 40)];
+    [lbl setText:@"This is a test"];
+    [lbl setTextColor:[UIColor whiteColor]];
+    [view addSubview:lbl];
     
-    _centerAnchorView = [[UIView alloc] initWithFrame:CGRectMake(320.0/2.0-sideHelperView/2.0, -sideHelperView/2.0, sideHelperView, sideHelperView)];
-    [self.view addSubview:_centerAnchorView];
-    //[_centerAnchorView setBackgroundColor:[UIColor yellowColor]];
-    [self.view bringSubviewToFront:_centerAnchorView];
-    
-    _sideAnchorView = [[UIView alloc] initWithFrame:CGRectMake(-sideHelperView/2.0, -sideHelperView/2.0, sideHelperView, sideHelperView)];
-    [self.view addSubview:_sideAnchorView];
-    //[_sideAnchorView setBackgroundColor:[UIColor yellowColor]];
-    [self.view bringSubviewToFront:_sideAnchorView];
-    
-    _menuView = [[MGMenuView alloc] initWithFrame:CGRectMake(0, -250.0, 320.0, 250.0) sideAnchorView:_sideAnchorView centerAnchorView:_centerAnchorView];
-    [self.view insertSubview:_menuView atIndex:0];
-    [_menuView setBackgroundColor:[UIColor clearColor]];
-    
-    _menuView.frame = CGRectMake(0, 0, _menuView.frame.size.width, _menuView.frame.size.height);
-}
-
-
-- (void)tick:(CADisplayLink *)displayLink {
-    [_menuView setNeedsDisplay];
+    _menuView = [[MGMenuView alloc] initWithMenuView:view];
+    [self.view addSubview:_menuView];
 }
 
 - (IBAction)menuAction:(id)sender {
-    
-    _displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(tick:)];
-    [_displayLink addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSDefaultRunLoopMode];
-    
-    if (!_isShowed) {
-        
-        [UIView animateWithDuration:animationDuration delay:0 usingSpringWithDamping:0.60 initialSpringVelocity:0.4 options:(UIViewAnimationOptionBeginFromCurrentState | UIViewAnimationOptionAllowUserInteraction) animations:^{
-            _centerAnchorView.frame = CGRectMake(_centerAnchorView.frame.origin.x, _centerAnchorView.frame.origin.y+_menuView.frame.size.height-10.0, sideHelperView, sideHelperView);
-        } completion:nil];
-        
-        [UIView animateWithDuration:animationDuration delay:0 usingSpringWithDamping:0.5 initialSpringVelocity:0.9 options:(UIViewAnimationOptionBeginFromCurrentState | UIViewAnimationOptionAllowUserInteraction) animations:^{
-            _sideAnchorView.frame = CGRectMake(-sideHelperView/2.0, _sideAnchorView.frame.origin.y+_menuView.frame.size.height-10.0, sideHelperView, sideHelperView);
-        } completion:^(BOOL finished) {
-            [_displayLink invalidate];
-            _displayLink = nil;
-        }];
-    } else {
-        
-        [UIView animateWithDuration:animationDuration delay:0 usingSpringWithDamping:0.60 initialSpringVelocity:0.4 options:(UIViewAnimationOptionBeginFromCurrentState | UIViewAnimationOptionAllowUserInteraction) animations:^{
-            _centerAnchorView.frame = CGRectMake(_centerAnchorView.frame.origin.x, -sideHelperView/2.0, sideHelperView, sideHelperView);
-        } completion:nil];
-        
-        [UIView animateWithDuration:animationDuration delay:0 usingSpringWithDamping:0.5 initialSpringVelocity:0.9 options:(UIViewAnimationOptionBeginFromCurrentState | UIViewAnimationOptionAllowUserInteraction) animations:^{
-            _sideAnchorView.frame = CGRectMake(-sideHelperView/2.0, -sideHelperView/2.0, sideHelperView, sideHelperView);
-        } completion:^(BOOL finished) {
-            [_displayLink invalidate];
-            _displayLink = nil;
-        }];
-    }
-    
-    _isShowed = !_isShowed;
+    if (_menuView.isShown)
+        [_menuView hide];
+    else
+        [_menuView show];
 }
 
 @end

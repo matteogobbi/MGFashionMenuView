@@ -10,43 +10,29 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MGFashionMenu/MGViewController.m"
-            timestampString = "426296549.080897"
+            timestampString = "426813634.739701"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "78"
-            endingLineNumber = "78"
-            landmarkName = "-menuAction:"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "-viewDidLoad"
             landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[MGViewController menuAction:]"
-                  moduleName = "MGFashionMenu"
-                  urlString = "file:///Users/matteogobbi/Matteo%20Suite/Projects/iOS%20Project/Experiments/MGFashionMenu/MGFashionMenu/MGViewController.m"
-                  timestampString = "426295878.074417"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "81"
-                  endingLineNumber = "81"
-                  offsetFromSymbolStart = "878">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__31-[MGViewController menuAction:]_block_invoke51"
-                  moduleName = "MGFashionMenu"
-                  urlString = "file:///Users/matteogobbi/Matteo%20Suite/Projects/iOS%20Project/Experiments/MGFashionMenu/MGFashionMenu/MGViewController.m"
-                  timestampString = "426295878.07459"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "81"
-                  endingLineNumber = "81"
-                  offsetFromSymbolStart = "15">
-               </Location>
-            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MGFashionMenu/MGMenuView.m"
+            timestampString = "426813438.740066"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
+            landmarkName = "-drawRect:"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
