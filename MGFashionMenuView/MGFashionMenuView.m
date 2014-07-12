@@ -53,9 +53,7 @@ struct Animation {
         
         //Prepare views positions
         _sideAnchorView = [[UIView alloc] initWithFrame:CGRectMake(-sideHelperView/2.0, -sideHelperView/2.0, sideHelperView, sideHelperView)];
-        
         _centerAnchorView = [[UIView alloc] initWithFrame:CGRectMake(self.frame.size.width/2.0-sideHelperView/2.0, -sideHelperView/2.0, sideHelperView, sideHelperView)];
-        
         _menuView.frame = CGRectMake(0, -_menuView.frame.size.height, _menuView.frame.size.width, _menuView.frame.size.height);
         
         //Colors
@@ -153,7 +151,6 @@ struct Animation {
                 _centerAnchorView.frame = CGRectMake(_centerAnchorView.frame.origin.x, _menuView.frame.size.height-sideHelperView/2.0, sideHelperView, sideHelperView);
             else {
                 _centerAnchorView.frame = CGRectMake(_centerAnchorView.frame.origin.x, -sideHelperView/2.0, sideHelperView, sideHelperView);
-                
                 _menuView.frame = CGRectMake(_menuView.frame.origin.x, -_menuView.frame.size.height, _menuView.frame.size.width, _menuView.frame.size.height);
             }
             
