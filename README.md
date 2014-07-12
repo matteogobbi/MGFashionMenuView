@@ -29,7 +29,7 @@ Useful properties:
     //Access to property to know if the control is shown or not
     [menuView isShown];
     
-    //Access to property to know if the control is performing the animating or not
+    //Access to property to know if the control is performing the animation or not
     [menuView isAnimating];
 ```
 
@@ -45,4 +45,4 @@ Matteo Gobbi
 
 ## License
 
-MGConferenceDatePicker is available under the MIT license.
+MGFashionMenuView is available under the MIT license.
