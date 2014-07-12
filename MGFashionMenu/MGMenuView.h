@@ -9,7 +9,10 @@
 #import <UIKit/UIKit.h>
 
 typedef NS_ENUM(NSUInteger, MGAnimationType) {
-    MGAnimationTypeBlob
+    MGAnimationTypeBounce,
+    MGAnimationTypeSoftBounce,
+    MGAnimationTypeHardBounce,
+    MGAnimationTypeWave
 };
 
 @interface MGMenuView : UIView
@@ -18,7 +21,7 @@ typedef NS_ENUM(NSUInteger, MGAnimationType) {
 @property (atomic, assign, readonly) BOOL isAnimating;
 
 - (instancetype)initWithMenuView:(UIView *)menuView;
-- (instancetype)initWithMenuView:(UIView *)menuView andAnimation:(MGAnimationType)animationType;
+- (instancetype)initWithMenuView:(UIView *)menuView andAnimationType:(MGAnimationType)animationType;
 
 - (void)show;
 - (void)hide;

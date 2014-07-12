@@ -8,7 +8,7 @@
 
 #import "MGMenuView.h"
 
-static CGFloat const sideHelperView = 20.0;
+static CGFloat const sideHelperView = 2.0;
 static CGFloat const animationDuration = .5;
 
 
@@ -36,11 +36,11 @@ struct Animation {
 }
 
 - (instancetype)initWithMenuView:(UIView *)menuView {
-    return [self initWithMenuView:menuView andAnimation:MGAnimationTypeBlob];
+    return [self initWithMenuView:menuView andAnimationType:MGAnimationTypeBounce];
 }
 
 //Init the menuView and the helperViews
-- (instancetype)initWithMenuView:(UIView *)menuView andAnimation:(MGAnimationType)animationType {
+- (instancetype)initWithMenuView:(UIView *)menuView andAnimationType:(MGAnimationType)animationType {
     
     CGRect fakeRect = menuView.frame;
     
@@ -169,13 +169,43 @@ struct Animation {
 
 - (void)mg_setValuesForAnimationType:(MGAnimationType)animationType {
     switch (animationType) {
-        case MGAnimationTypeBlob: {
+        case MGAnimationTypeBounce: {
             animation.sideDelay = .1;
             animation.sideDumping = .4;
             animation.sideVelocity = .9;
             animation.centerDelay = 0;
             animation.centerDumping = .6;
             animation.centerVelocity = .6;
+        }
+            break;
+            
+        case MGAnimationTypeSoftBounce: {
+            animation.sideDelay = .1;
+            animation.sideDumping = .6;
+            animation.sideVelocity = .6;
+            animation.centerDelay = 0;
+            animation.centerDumping = .6;
+            animation.centerVelocity = .6;
+        }
+            break;
+            
+        case MGAnimationTypeHardBounce: {
+            animation.sideDelay = .1;
+            animation.sideDumping = .3;
+            animation.sideVelocity = .7;
+            animation.centerDelay = 0;
+            animation.centerDumping = .6;
+            animation.centerVelocity = .4;
+        }
+            break;
+            
+        case MGAnimationTypeWave: {
+            animation.sideDelay = .0;
+            animation.sideDumping = .5;
+            animation.sideVelocity = .5;
+            animation.centerDelay = .1;
+            animation.centerDumping = .5;
+            animation.centerVelocity = .5;
         }
             break;
             

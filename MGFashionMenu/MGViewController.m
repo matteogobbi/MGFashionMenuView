@@ -32,10 +32,10 @@
     _menuView = [[MGMenuView alloc] initWithMenuView:[self createExampleView]];
     [self.view addSubview:_menuView];
     
-    _menuView2 = [[MGMenuView alloc] initWithMenuView:[self createExampleView2]];
+    _menuView2 = [[MGMenuView alloc] initWithMenuView:[self createExampleView2] andAnimationType:MGAnimationTypeSoftBounce];
     [self.view addSubview:_menuView2];
     
-    _menuView3 = [[MGMenuView alloc] initWithMenuView:[self createExampleView3]];
+    _menuView3 = [[MGMenuView alloc] initWithMenuView:[self createExampleView3] andAnimationType:MGAnimationTypeWave];
     [self.view addSubview:_menuView3];
 }
 
