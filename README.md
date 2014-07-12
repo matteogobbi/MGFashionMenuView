@@ -3,6 +3,8 @@ MGFashionMenuView
 
 MGFashionMenuView is a view with an awesome animation when it is shown/hidden. It is useful to present a menu, a notification or an action button.
 
+<img src='http://www.matteogobbi.it/files-hosting/Video_MGFashionMenuView.gif' width='260'/>
+
 ## Info
 
 This code must be used under ARC. 
