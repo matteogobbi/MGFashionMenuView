@@ -44,7 +44,7 @@
     [view setBackgroundColor:[UIColor colorWithRed:0 green:0.722 blue:1 alpha:1]];
     
     UILabel *lbl = [[UILabel alloc] initWithFrame:view.bounds];
-    [lbl setText:@"This is a test"];
+    [lbl setText:@"This is a test with Bounce animation"];
     [lbl setTextAlignment:NSTextAlignmentCenter];
     [lbl setTextColor:[UIColor whiteColor]];
     [view addSubview:lbl];
@@ -73,7 +73,7 @@
     [view setBackgroundColor:[UIColor colorWithRed:0.2 green:0.722 blue:0.2 alpha:1]];
     
     UILabel *lbl = [[UILabel alloc] initWithFrame:view.bounds];
-    [lbl setText:@"This is a test"];
+    [lbl setText:@"This is a test with Wave animation"];
     [lbl setTextAlignment:NSTextAlignmentCenter];
     [lbl setTextColor:[UIColor whiteColor]];
     [view addSubview:lbl];
