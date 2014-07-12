@@ -1,12 +1,12 @@
 //
-//  MGMenuView.m
+//  MGFashionMenuView.m
 //  MGFashionMenu
 //
 //  Created by Matteo Gobbi on 05/07/2014.
 //  Copyright (c) 2014 Matteo Gobbi. All rights reserved.
 //
 
-#import "MGMenuView.h"
+#import "MGFashionMenuView.h"
 
 static CGFloat const sideHelperView = 2.0;
 static CGFloat const animationDuration = .5;
@@ -22,7 +22,7 @@ struct Animation {
 };
 
 
-@implementation MGMenuView {
+@implementation MGFashionMenuView {
     UIView *_centerAnchorView;
     UIView *_sideAnchorView;
     UIView *_menuView;

@@ -7,7 +7,7 @@
 //
 
 #import "MGViewController.h"
-#import "MGMenuView.h"
+#import "MGFashionMenuView.h"
 #import <CoreGraphics/CoreGraphics.h>
 
 @interface MGViewController ()
@@ -20,22 +20,22 @@
 
 
 @implementation MGViewController {
-    MGMenuView *_menuView;
-    MGMenuView *_menuView2;
-    MGMenuView *_menuView3;
+    MGFashionMenuView *_menuView;
+    MGFashionMenuView *_menuView2;
+    MGFashionMenuView *_menuView3;
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
-    _menuView = [[MGMenuView alloc] initWithMenuView:[self createExampleView]];
+    _menuView = [[MGFashionMenuView alloc] initWithMenuView:[self createExampleView]];
     [self.view addSubview:_menuView];
     
-    _menuView2 = [[MGMenuView alloc] initWithMenuView:[self createExampleView2] andAnimationType:MGAnimationTypeSoftBounce];
+    _menuView2 = [[MGFashionMenuView alloc] initWithMenuView:[self createExampleView2] andAnimationType:MGAnimationTypeSoftBounce];
     [self.view addSubview:_menuView2];
     
-    _menuView3 = [[MGMenuView alloc] initWithMenuView:[self createExampleView3] andAnimationType:MGAnimationTypeWave];
+    _menuView3 = [[MGFashionMenuView alloc] initWithMenuView:[self createExampleView3] andAnimationType:MGAnimationTypeWave];
     [self.view addSubview:_menuView3];
 }
 

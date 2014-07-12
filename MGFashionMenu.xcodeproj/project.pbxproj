@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		65846A8119716D8000382341 /* MGFashionMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 65846A8019716D8000382341 /* MGFashionMenuView.m */; };
 		65FDA4041968AE5A001DF616 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65FDA4031968AE5A001DF616 /* Foundation.framework */; };
 		65FDA4061968AE5A001DF616 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65FDA4051968AE5A001DF616 /* CoreGraphics.framework */; };
 		65FDA4081968AE5A001DF616 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65FDA4071968AE5A001DF616 /* UIKit.framework */; };
@@ -21,7 +22,6 @@
 		65FDA4251968AE5A001DF616 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65FDA4071968AE5A001DF616 /* UIKit.framework */; };
 		65FDA42D1968AE5A001DF616 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 65FDA42B1968AE5A001DF616 /* InfoPlist.strings */; };
 		65FDA42F1968AE5A001DF616 /* MGFashionMenuTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 65FDA42E1968AE5A001DF616 /* MGFashionMenuTests.m */; };
-		65FDA43A1968B65D001DF616 /* MGMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 65FDA4391968B65D001DF616 /* MGMenuView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		65846A7F19716D8000382341 /* MGFashionMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGFashionMenuView.h; sourceTree = "<group>"; };
+		65846A8019716D8000382341 /* MGFashionMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGFashionMenuView.m; sourceTree = "<group>"; };
 		65FDA4001968AE5A001DF616 /* MGFashionMenu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MGFashionMenu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65FDA4031968AE5A001DF616 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		65FDA4051968AE5A001DF616 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -54,8 +56,6 @@
 		65FDA42A1968AE5A001DF616 /* MGFashionMenuTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MGFashionMenuTests-Info.plist"; sourceTree = "<group>"; };
 		65FDA42C1968AE5A001DF616 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		65FDA42E1968AE5A001DF616 /* MGFashionMenuTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MGFashionMenuTests.m; sourceTree = "<group>"; };
-		65FDA4381968B65D001DF616 /* MGMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGMenuView.h; sourceTree = "<group>"; };
-		65FDA4391968B65D001DF616 /* MGMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGMenuView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +82,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		65846A7E19716D8000382341 /* MGFashionMenuView */ = {
+			isa = PBXGroup;
+			children = (
+				65846A7F19716D8000382341 /* MGFashionMenuView.h */,
+				65846A8019716D8000382341 /* MGFashionMenuView.m */,
+			);
+			path = MGFashionMenuView;
+			sourceTree = SOURCE_ROOT;
+		};
 		65FDA3F71968AE5A001DF616 = {
 			isa = PBXGroup;
 			children = (
@@ -115,6 +124,7 @@
 		65FDA4091968AE5A001DF616 /* MGFashionMenu */ = {
 			isa = PBXGroup;
 			children = (
+				65846A7E19716D8000382341 /* MGFashionMenuView */,
 				65FDA4121968AE5A001DF616 /* MGAppDelegate.h */,
 				65FDA4131968AE5A001DF616 /* MGAppDelegate.m */,
 				65FDA4151968AE5A001DF616 /* Main.storyboard */,
@@ -122,8 +132,6 @@
 				65FDA4191968AE5A001DF616 /* MGViewController.m */,
 				65FDA41B1968AE5A001DF616 /* Images.xcassets */,
 				65FDA40A1968AE5A001DF616 /* Supporting Files */,
-				65FDA4381968B65D001DF616 /* MGMenuView.h */,
-				65FDA4391968B65D001DF616 /* MGMenuView.m */,
 			);
 			path = MGFashionMenu;
 			sourceTree = "<group>";
@@ -256,9 +264,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				65FDA4141968AE5A001DF616 /* MGAppDelegate.m in Sources */,
+				65846A8119716D8000382341 /* MGFashionMenuView.m in Sources */,
 				65FDA41A1968AE5A001DF616 /* MGViewController.m in Sources */,
 				65FDA4101968AE5A001DF616 /* main.m in Sources */,
-				65FDA43A1968B65D001DF616 /* MGMenuView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -463,6 +471,7 @@
 				65FDA4341968AE5A001DF616 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		65FDA4351968AE5A001DF616 /* Build configuration list for PBXNativeTarget "MGFashionMenuTests" */ = {
 			isa = XCConfigurationList;
@@ -471,6 +480,7 @@
 				65FDA4371968AE5A001DF616 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

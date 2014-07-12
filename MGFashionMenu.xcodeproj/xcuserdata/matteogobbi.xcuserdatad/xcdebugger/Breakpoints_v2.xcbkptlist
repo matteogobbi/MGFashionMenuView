@@ -25,7 +25,7 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MGFashionMenu/MGMenuView.m"
+            filePath = "MGFashionMenu/MGFashionMenuView.m"
             timestampString = "426815720.751743"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"

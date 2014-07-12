@@ -1,5 +1,5 @@
 //
-//  MGMenuView.h
+//  MGFashionMenuView.h
 //  MGFashionMenu
 //
 //  Created by Matteo Gobbi on 05/07/2014.
@@ -15,7 +15,7 @@ typedef NS_ENUM(NSUInteger, MGAnimationType) {
     MGAnimationTypeWave
 };
 
-@interface MGMenuView : UIView
+@interface MGFashionMenuView : UIView
 
 @property (atomic, assign, readonly) BOOL isShown;
 @property (atomic, assign, readonly) BOOL isAnimating;
