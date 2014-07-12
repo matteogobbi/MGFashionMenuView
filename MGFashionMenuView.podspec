@@ -7,7 +7,7 @@ Pod::Spec.new do |s|
                      :file => 'LICENSE' }
   s.author       = { 'Matteo Gobbi' => 'job@matteogobbi.com' }
   s.source       = { :git => 'https://github.com/matteogobbi/MGFashionMenuView.git',
-                     :tag => '0.0.2' }
+                     :tag => '0.0.1' }
   s.platform     = :ios, '6.0'
   s.source_files = 'MGFashionMenuView/MGFashionMenuView.{h,m}'
   s.frameworks   = 'CoreGraphics', 'UIKit'
