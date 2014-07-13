@@ -8,8 +8,8 @@
 
 #import "MGFashionMenuView.h"
 
-static CGFloat const sideHelperView = 2.0;
-static CGFloat const animationDuration = .5;
+static CGFloat const MGSideHelperView = 2.0;
+static CGFloat const MGAnimationDuration = .5;
 
 
 struct Animation {
