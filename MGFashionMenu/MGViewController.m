@@ -32,10 +32,10 @@
     _menuView = [[MGFashionMenuView alloc] initWithMenuView:[self createExampleView]];
     [self.view addSubview:_menuView];
     
-    _menuView2 = [[MGFashionMenuView alloc] initWithMenuView:[self createExampleView2] andAnimationType:MGAnimationTypeSoftBounce];
+    _menuView2 = [[MGFashionMenuView alloc] initWithMenuView:[self createExampleView2] animationType:MGAnimationTypeSoftBounce];
     [self.view addSubview:_menuView2];
     
-    _menuView3 = [[MGFashionMenuView alloc] initWithMenuView:[self createExampleView3] andAnimationType:MGAnimationTypeWave];
+    _menuView3 = [[MGFashionMenuView alloc] initWithMenuView:[self createExampleView3] animationType:MGAnimationTypeWave];
     [self.view addSubview:_menuView3];
 }
 

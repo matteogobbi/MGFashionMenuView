@@ -36,11 +36,11 @@ struct Animation {
 }
 
 - (instancetype)initWithMenuView:(UIView *)menuView {
-    return [self initWithMenuView:menuView andAnimationType:MGAnimationTypeBounce];
+    return [self initWithMenuView:menuView animationType:MGAnimationTypeBounce];
 }
 
 //Init the menuView and the helperViews
-- (instancetype)initWithMenuView:(UIView *)menuView andAnimationType:(MGAnimationType)animationType {
+- (instancetype)initWithMenuView:(UIView *)menuView animationType:(MGAnimationType)animationType {
     
     CGRect fakeRect = menuView.frame;
     

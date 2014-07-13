@@ -21,7 +21,7 @@ typedef NS_ENUM(NSUInteger, MGAnimationType) {
 @property (atomic, assign, readonly) BOOL isAnimating;
 
 - (instancetype)initWithMenuView:(UIView *)menuView;
-- (instancetype)initWithMenuView:(UIView *)menuView andAnimationType:(MGAnimationType)animationType;
+- (instancetype)initWithMenuView:(UIView *)menuView animationType:(MGAnimationType)animationType;
 
 - (void)show;
 - (void)hide;
