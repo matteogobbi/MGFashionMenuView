@@ -52,8 +52,8 @@ struct Animation {
         _menuView = menuView;
         
         //Prepare views positions
-        _sideAnchorView = [[UIView alloc] initWithFrame:CGRectMake(-sideHelperView/2.0, -sideHelperView/2.0, sideHelperView, sideHelperView)];
-        _centerAnchorView = [[UIView alloc] initWithFrame:CGRectMake(self.frame.size.width/2.0-sideHelperView/2.0, -sideHelperView/2.0, sideHelperView, sideHelperView)];
+        _sideAnchorView = [[UIView alloc] initWithFrame:CGRectMake(-MGSideHelperView/2.0, -MGSideHelperView/2.0, MGSideHelperView, MGSideHelperView)];
+        _centerAnchorView = [[UIView alloc] initWithFrame:CGRectMake(self.frame.size.width/2.0-MGSideHelperView/2.0, -MGSideHelperView/2.0, MGSideHelperView, MGSideHelperView)];
         _menuView.frame = CGRectMake(0, -_menuView.frame.size.height, _menuView.frame.size.width, _menuView.frame.size.height);
         
         //Colors
@@ -127,13 +127,13 @@ struct Animation {
         [_displayLink addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSDefaultRunLoopMode];
         
         
-        [UIView animateWithDuration:animationDuration delay:animation.sideDelay usingSpringWithDamping:animation.sideDumping initialSpringVelocity:animation.sideVelocity options:(UIViewAnimationOptionBeginFromCurrentState | UIViewAnimationOptionAllowUserInteraction) animations:^{
+        [UIView animateWithDuration:MGAnimationDuration delay:animation.sideDelay usingSpringWithDamping:animation.sideDumping initialSpringVelocity:animation.sideVelocity options:(UIViewAnimationOptionBeginFromCurrentState | UIViewAnimationOptionAllowUserInteraction) animations:^{
             
             if (needsToAppear) {
-                _sideAnchorView.frame = CGRectMake(_sideAnchorView.frame.origin.x, _menuView.frame.size.height-sideHelperView/2.0, sideHelperView, sideHelperView);
+                _sideAnchorView.frame = CGRectMake(_sideAnchorView.frame.origin.x, _menuView.frame.size.height-MGSideHelperView/2.0, MGSideHelperView, MGSideHelperView);
                 _menuView.frame = CGRectMake(_menuView.frame.origin.x, 0, _menuView.frame.size.width, _menuView.frame.size.height);
             } else
-                _sideAnchorView.frame = CGRectMake(_sideAnchorView.frame.origin.x, -sideHelperView/2.0, sideHelperView, sideHelperView);
+                _sideAnchorView.frame = CGRectMake(_sideAnchorView.frame.origin.x, -MGSideHelperView/2.0, MGSideHelperView, MGSideHelperView);
             
         } completion:^(BOOL finished) {
             
@@ -145,12 +145,12 @@ struct Animation {
         }];
         
         
-        [UIView animateWithDuration:animationDuration delay:animation.centerDelay usingSpringWithDamping:animation.centerDumping initialSpringVelocity:animation.centerVelocity options:(UIViewAnimationOptionBeginFromCurrentState | UIViewAnimationOptionAllowUserInteraction) animations:^{
+        [UIView animateWithDuration:MGAnimationDuration delay:animation.centerDelay usingSpringWithDamping:animation.centerDumping initialSpringVelocity:animation.centerVelocity options:(UIViewAnimationOptionBeginFromCurrentState | UIViewAnimationOptionAllowUserInteraction) animations:^{
             
             if (needsToAppear)
-                _centerAnchorView.frame = CGRectMake(_centerAnchorView.frame.origin.x, _menuView.frame.size.height-sideHelperView/2.0, sideHelperView, sideHelperView);
+                _centerAnchorView.frame = CGRectMake(_centerAnchorView.frame.origin.x, _menuView.frame.size.height-MGSideHelperView/2.0, MGSideHelperView, MGSideHelperView);
             else {
-                _centerAnchorView.frame = CGRectMake(_centerAnchorView.frame.origin.x, -sideHelperView/2.0, sideHelperView, sideHelperView);
+                _centerAnchorView.frame = CGRectMake(_centerAnchorView.frame.origin.x, -MGSideHelperView/2.0, MGSideHelperView, MGSideHelperView);
                 _menuView.frame = CGRectMake(_menuView.frame.origin.x, -_menuView.frame.size.height, _menuView.frame.size.width, _menuView.frame.size.height);
             }
             
