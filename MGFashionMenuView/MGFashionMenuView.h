@@ -24,6 +24,8 @@ typedef NS_ENUM(NSUInteger, MGAnimationType) {
 - (instancetype)initWithMenuView:(UIView *)menuView animationType:(MGAnimationType)animationType;
 
 - (void)show;
+- (void)showWithCompletition:(void (^)(void))completion;
 - (void)hide;
+- (void)hideWithCompletition:(void (^)(void))completion;
 
 @end
