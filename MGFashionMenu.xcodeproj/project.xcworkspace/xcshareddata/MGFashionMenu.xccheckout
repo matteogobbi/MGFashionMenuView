@@ -10,29 +10,29 @@
 	<string>MGFashionMenu</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>771B6940-74DD-4120-8B21-58BE4C611449</key>
+		<key>A0EB1722519769C37444789CE3C58066F015ADD3</key>
 		<string>https://github.com/matteogobbi/MGFashionMenuView.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>MGFashionMenu.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>771B6940-74DD-4120-8B21-58BE4C611449</key>
+		<key>A0EB1722519769C37444789CE3C58066F015ADD3</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/matteogobbi/MGFashionMenuView.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>771B6940-74DD-4120-8B21-58BE4C611449</string>
+	<string>A0EB1722519769C37444789CE3C58066F015ADD3</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>771B6940-74DD-4120-8B21-58BE4C611449</string>
+			<string>A0EB1722519769C37444789CE3C58066F015ADD3</string>
 			<key>IDESourceControlWCCName</key>
 			<string>MGFashionMenu</string>
 		</dict>

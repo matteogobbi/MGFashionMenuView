@@ -59,6 +59,8 @@ struct Animation {
         //Colors
         _fillColor = menuView.backgroundColor;
         [self setBackgroundColor:[UIColor clearColor]];
+        [self setHidden:YES];
+        
         [_menuView setBackgroundColor:[UIColor clearColor]];
         
         //Animation
@@ -121,6 +123,10 @@ struct Animation {
     
     if (_isShown != needsToAppear && !_isAnimating) {
         
+        if (needsToAppear) {
+            [self setHidden:NO];
+        }
+        
         _isAnimating = YES;
         
         _displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(mg_tick:)];
@@ -141,6 +147,10 @@ struct Animation {
             _displayLink = nil;
             _isShown = needsToAppear;
             _isAnimating = NO;
+            
+            if (!needsToAppear) {
+                [self setHidden:YES];
+            }
             
         }];
         
