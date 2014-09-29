@@ -109,17 +109,25 @@ struct Animation {
 #pragma mark - Public Methods
 
 - (void)show {
-    [self mg_animateMenuViewToAppear:YES];
+    [self showWithCompletition:nil];
+}
+
+- (void)showWithCompletition:(void (^)(void))completion {
+    [self mg_animateMenuViewToAppear:YES completition:completion];
 }
 
 - (void)hide {
-    [self mg_animateMenuViewToAppear:NO];
+    [self hideWithCompletition:nil];
+}
+
+- (void)hideWithCompletition:(void (^)(void))completion {
+    [self mg_animateMenuViewToAppear:NO completition:completion];
 }
 
 #pragma mark - Private Methods
 
 //Animation of the helperViews
-- (void)mg_animateMenuViewToAppear:(BOOL)needsToAppear {
+- (void)mg_animateMenuViewToAppear:(BOOL)needsToAppear completition:(void (^)(void))completion {
     
     if (_isShown != needsToAppear && !_isAnimating) {
         
@@ -152,6 +160,9 @@ struct Animation {
                 [self setHidden:YES];
             }
             
+            if (completion) {
+                completion();
+            }
         }];
         
         
